@@ -3,6 +3,7 @@ const books = [
         name: "The Warmth of Other Suns",
         author: "Isabel Wilkerson",
         genre: ["History"],
+        price: 21.00,
         edition: "Paperback",
     }
      {
