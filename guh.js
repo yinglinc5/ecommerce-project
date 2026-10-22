@@ -112,9 +112,15 @@ const books = [
         edition: "Hardcover",
     },
 ];
+
 function filterGenre(gen){
 let result = books.filter((nov) => nov.genre.includes(gen));
 return result;
 }
 res = filterGenre("Fantasy")
 console.log(res);
+
+cart = []
+function addToCart(item){
+cart.push()
+}
