@@ -122,5 +122,6 @@ console.log(res);
 
 cart = []
 function addToCart(item){
-cart.push()
+cart.push(item)
+total += item.price;
 }

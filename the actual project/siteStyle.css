@@ -1,0 +1,26 @@
+html,
+body,
+*{
+    background-color: #350609;
+}
+.card{
+    background-color: rgb(255, 238, 217);
+    font-family: "Gelasio", serif;
+    font-size: 2rem;
+    font-style: normal;
+    height: 70vh;
+    width: 30vh;
+    padding: 2rem;
+    margin: 4rem;
+    display: flex;
+    justify-content: center;
+    color:#350609;
+}
+.card-content{
+height: 50rem;
+}
+.card.h2{
+    text-align: left;
+    
+    
+}
