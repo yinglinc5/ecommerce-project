@@ -125,3 +125,21 @@ function addToCart(item){
 cart.push(item)
 total += item.price;
 }
+
+function inject(books){
+    const container = document.querySelector(".container");
+          container.insertAdjacentHTML(
+    "beforeend",
+    `<div class="card">
+    <div class="item-name">
+    <h2>${books.name}</h2>
+    </div>
+    <div class="card-content">
+    <img src="" alt="book...">
+    </div>
+    <div class="${books.price}">
+    <h4>price</h4>
+    </div>
+    <a href="#" class="btn">Add To Cart</a>
+    </div>`,);
+}

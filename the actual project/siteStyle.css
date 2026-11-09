@@ -20,6 +20,7 @@ body{
     margin: 4rem;
     display: flex;
     flex-direction:column;
+    border-radius: 2rem;
     
 }
 .card-content{
@@ -35,6 +36,7 @@ height: 50rem;
     text-align:left;
     color:#350609;
     font-size: 2rem;
+    padding: 1rem;
 }
 .btn{
 height: 5rem;
@@ -43,8 +45,8 @@ padding: 1rem;
 background-color: #e6c19e;
 border: 2px solid #c49678;
 
-font-size: 1.5rem;
+font-size: 1.8rem;
 text-decoration: none;
 border-radius: 1.5rem;
-color: #ffeed9;
+color: #350609;
 }
