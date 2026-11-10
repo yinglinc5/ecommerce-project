@@ -9,13 +9,17 @@ body,
 body{
    background-color:  #350609;
 }
+.box{
+    display: flex;
+    flex-wrap: wrap;
+}
 .card{
     background-color: #ffeed9;
     font-family: "Gelasio", serif;
     font-size: 2rem;
     font-style: normal;
-    height: 50vh;
-    width: 30vh;
+    height: 70vh;
+    width: 40vh;
     padding: 2rem;
     margin: 4rem;
     display: flex;
@@ -23,8 +27,8 @@ body{
     border-radius: 2rem;
     
 }
-.card-content{
-height: 50rem;
+.card-content img{
+height: 28rem;
 
 }
 .card h2{
