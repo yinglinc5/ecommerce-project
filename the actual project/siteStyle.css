@@ -8,6 +8,7 @@ body,
 }
 body{
    background-color:  #350609;
+   justify-content: space-around;
 }
 .box{
     display: flex;
