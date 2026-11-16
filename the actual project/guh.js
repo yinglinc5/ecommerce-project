@@ -2,10 +2,10 @@ const books = [
     {
         name: "The Warmth of Other Suns",
         author: "Isabel Wilkerson",
-        genre: ["History"],
+        genre: ["History", "Nonfiction", "Biography"],
         price: 21.00,
         edition: "Paperback",
-        img: "shopping.webp",
+        img: "./img/warmth.webp",
     },
      {
         name: "The Maze Runner",
@@ -13,7 +13,7 @@ const books = [
         genre: ["Fiction", "Fantasy", "Young Adult", "Dystopia"],
         price: 18.78,
         edition: "Paperback",
-        img: "",
+        img: "./img/maze.png",
     },
      {
         name: "The Great Gatsby",
@@ -104,29 +104,29 @@ const books = [
         img: "",
     },
      {
-        name: "",
-        author: "",
-        genre: [""],
-        price: ,
+        name: "Piranesi",
+        author: "Susanna Clarke",
+        genre: ["Fantasy", "Fiction", "Mystery"],
+        price: 26.99,
         edition: "Hardcover",
         img: "",
     },
      {
-        name: "",
-        author: "",
-        genre: [""],
-        price: 28.57,
+        name: "The Maid",
+        author: "Nita Prose",
+        genre: ["Mystery", "Fiction"],
+        price: 15.87,
         edition: "Paperback",
         img: "",
     },
     {
-        name: "",
-        author:"",
-        genre: [],
-        price: ,
-        edition: "Hardcover",
+        name: "What Feeds Below",
+        author:"Tatiana Schlote-Bonne",
+        genre: ["Young Adult", "Fantasy","Horror", "Dystopia", "Mystery"],
+        price: 16.73,
+        edition: "Paperback",
         img: "",
-    }
+    },
      {
         name: "Stolen Letters",
         author: "Elliot Pendriel",
@@ -160,13 +160,13 @@ const books = [
         img: "",
     },
 ];
-
+/* 
 function filterGenre(gen){
 let result = books.filter((nov) => nov.genre.includes(gen));
 return result;
 }
 res = filterGenre("Fantasy")
-console.log(res);
+console.log(res); */
 
 cart = []
 function addToCart(item){
@@ -184,7 +184,7 @@ function inject(books){
     <h2>${books.name}</h2>
     </div>
     <div class="card-content">
-    <img src="images/${books.img}" alt="book..."/>
+    <img src= ${books.img} alt="book..."/>
     </div>
     <div class="price">
     <h4>$${books.price}</h4>

@@ -26,10 +26,12 @@ body{
     display: flex;
     flex-direction:column;
     border-radius: 2rem;
-    
+    border: 2px solid #c49678;
 }
 .card-content img{
 height: 28rem;
+align-content: center;
+border: 2px solid #350609;
 
 }
 .card h2{
@@ -49,7 +51,6 @@ text-align: center;
 padding: 1rem;
 background-color: #e6c19e;
 border: 2px solid #c49678;
-
 font-size: 1.8rem;
 text-decoration: none;
 border-radius: 1.5rem;
