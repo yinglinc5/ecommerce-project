@@ -21,7 +21,7 @@ const books = [
         genre: ["Fiction", "Romance", "Classics"],
         price: 18.67,
         edition: "Paperback",
-        img: "",
+        img: "./img/great.jpg",
     },
      {
         name: "The Little Prince",
@@ -29,7 +29,7 @@ const books = [
         genre: ["Classics", "Fiction", "Fantasy", "Childrens"],
         price: 22.00,
         edition: "Hardcover",
-        img: "",
+        img: "./img/prince.jpg",
     },
      {
         name: "Exit Party",
@@ -37,7 +37,7 @@ const books = [
         genre: ["Fiction", "Dystopia"],
         price: 19.68,
         edition: "Paperback",
-        img: "",
+        img: "./img/exit.jpg",
     },
      {
         name: "The Glass Castle",
@@ -45,7 +45,7 @@ const books = [
         genre: ["Nonfiction", "Memoir", "Biography"],
         price: 17.28,
         edition: "Paperback",
-        img: "",
+        img: "./img/castle.png",
     },
      {
         name: "Angela's Ashes",
@@ -53,7 +53,7 @@ const books = [
         genre: ["Nonfiction", "Memoir", "Classics"],
         price: 17.99,
         edition: "Paperback",
-        img: "",
+        img: "./img/ashes.jpg",
     },
      {
         name: "A Stolent Life",
@@ -61,15 +61,15 @@ const books = [
         genre: ["Nonfiction", "Memoir", "Biography", "True Crime"],
         price: 15.99,
         edition: "Paperback",
-        img: "",
+        img: "./img/stolen.jpg",
     },
      {
-        name: "The Diving Bell and the Butterfly: A Memoir of Life in Death",
+        name: "The Diving Bell and the Butterfly",
         author: "Jean-Dominique Bauby",
         genre: ["Nonfiction", "Memoir", "Biography"],
         price: 27.45,
         edition: "Hardcover",
-        img: "",
+        img: "./img/butterfly.jpg",
     },
      {
         name: "Something of a Calling",
@@ -77,7 +77,7 @@ const books = [
         genre: ["Horror", "Mystery", "Fiction", "Adult"],
         price: 30.00,
         edition: "Hardcover",
-        img: "",
+        img: "./img/calling.jpg",
     },
      {
         name: "The Marlow Murder Club",
@@ -85,7 +85,7 @@ const books = [
         genre: ["Mystery", "Fiction"],
         price: 77.91,
         edition: "Hardcover",
-        img: "",
+        img: "./img/marlow.jpg",
     },
      {
         name: "One of Us Is Lying",
@@ -93,7 +93,7 @@ const books = [
         genre: ["Mystery", "Fiction", "Romance"],
         price: 18.32,
         edition: "Paperback",
-        img: "",
+        img: "./img/lying.jpg",
     },
      {
         name: "Make Way for Ducklings",
@@ -101,7 +101,7 @@ const books = [
         genre: ["Childrens", "Fiction", "Classics"],
         price: 20.99,
         edition: "Hardcover",
-        img: "",
+        img: "./img/ducklings.jpg",
     },
      {
         name: "Piranesi",
@@ -109,7 +109,7 @@ const books = [
         genre: ["Fantasy", "Fiction", "Mystery"],
         price: 26.99,
         edition: "Hardcover",
-        img: "",
+        img: "./img/Piranesi.jpg",
     },
      {
         name: "The Maid",
@@ -117,7 +117,7 @@ const books = [
         genre: ["Mystery", "Fiction"],
         price: 15.87,
         edition: "Paperback",
-        img: "",
+        img: "./img/maid.jpg",
     },
     {
         name: "What Feeds Below",
@@ -125,7 +125,7 @@ const books = [
         genre: ["Young Adult", "Fantasy","Horror", "Dystopia", "Mystery"],
         price: 16.73,
         edition: "Paperback",
-        img: "",
+        img: "./img/feeds.jpg",
     },
      {
         name: "Stolen Letters",
@@ -133,7 +133,7 @@ const books = [
         genre: ["Romance", "Fiction", "Fantasy", "Young Adult"],
         price: 34.99,
         edition: "Hardcover",
-        img: "",
+        img: "./img/",
     },
      {
         name: "Virtual Duet",
@@ -141,7 +141,7 @@ const books = [
         genre: ["Romance", "Fiction", "Young Adult"],
         price: 29.00,
         edition: "Hardcover",
-        img: "",
+        img: "./img/",
     },
      {
         name: "Chainsaws and Squirrels",
@@ -149,7 +149,7 @@ const books = [
         genre: ["Horror", "Mystery", "Fiction", "Young Adult", "Dystopia"],
         price: 30.49,
         edition: "Hardcover",
-        img: "",
+        img: "./img/",
     },
      {
         name: "Angelic Melodies",
@@ -157,7 +157,7 @@ const books = [
         genre: ["Fiction", "Fantasy", "Adult", "Romance", "Mystery"],
         price: 28.57,
         edition: "Hardcover",
-        img: "",
+        img: "./img/",
     },
 ];
 /* 
@@ -168,11 +168,6 @@ return result;
 res = filterGenre("Fantasy")
 console.log(res); */
 
-cart = []
-function addToCart(item){
-cart.push(item)
-total += item.price;
-}
 
 function inject(books){
     books.forEach((books) =>{
@@ -189,14 +184,27 @@ function inject(books){
     <div class="price">
     <h4>$${books.price}</h4>
     </div>
-    <a href="#" class="btn">Add To Cart</a>
+    <button class="btn">Add To Cart</button>
     </div>`,);
 });
 }
 inject(books)
-const buttons = document.querySelectorAll("button");
-buttons.forEach((button =>
+
+//work in progress :[
+function addToCart(item){
+const buttons = document.querySelectorAll(".btn");
+buttons.forEach((button) =>
     button.addEventListener("click", function(event) {
-        console.log(event.target.closest(".card"))
-    })
-))
+    const container = document.querySelector(".cart");
+    container.insertAdjacentHTML(
+  "beforeend",
+  `<div class="cartcard">
+  <h5>${item.name}</h5>
+  <h5>${item.price}</h5>
+  </div>`,);
+    }
+    )
+)
+}
+
+const cart = document.querySelector(".cart");

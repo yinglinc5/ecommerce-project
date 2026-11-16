@@ -27,17 +27,17 @@ body{
     flex-direction:column;
     border-radius: 2rem;
     border: 2px solid #c49678;
+    align-items: center;
 }
 .card-content img{
-height: 28rem;
-align-content: center;
+height: 40rem;
 border: 2px solid #350609;
-
 }
 .card h2{
     text-align: left;
     color:#350609;
     font-size: 3rem;
+    margin-bottom: 2rem;
 }
 .card h4{
     text-align:left;
@@ -55,4 +55,24 @@ font-size: 1.8rem;
 text-decoration: none;
 border-radius: 1.5rem;
 color: #350609;
+font-family: "Gelasio", serif;
+}
+.cart{
+    display: none;
+    height: 60rem;
+    width: 60rem;
+    color: #6b0f15;
+    flex-direction:column;
+}
+.cartbtn{
+height: 5rem;
+text-align: bottom left;
+padding: 1rem;
+background-color: #e6c19e;
+border: 2px solid #c49678;
+font-size: 1.8rem;
+text-decoration: none;
+border-radius: 1.5rem;
+color: #350609;
+font-family: "Gelasio", serif;
 }
