@@ -175,7 +175,7 @@ function inject(books){
     container.insertAdjacentHTML(
     "beforeend",
     `<div class="card">
-    <div class="item-name">
+    <div class="item-name" id= ${books.name}>
     <h2>${books.name}</h2>
     </div>
     <div class="card-content">
@@ -191,20 +191,32 @@ function inject(books){
 inject(books)
 
 //work in progress :[
-function addToCart(item){
+/* function addToCart(item){
 const buttons = document.querySelectorAll(".btn");
-buttons.forEach((button) =>
-    button.addEventListener("click", function(event) {
-    const container = document.querySelector(".cart");
+buttons.forEach((btn) =>
+    btn.addEventListener("click", function (event) {
+    console.log(event.target.closest(".btn"))
+    const container = document.querySelector(".cart").getAttribute("data-item");
     container.insertAdjacentHTML(
-  "beforeend",
-  `<div class="cartcard">
-  <h5>${item.name}</h5>
-  <h5>${item.price}</h5>
-  </div>`,);
+    "beforeend",
+    `<div class="cartcard">
+    <h5>${item.name}</h5>
+    <h5>${item.price}</h5>
+    </div>`,);
     }
     )
 )
-}
+} */
+const buttons = document.querySelectorAll("btn");
+buttons.forEach((btn) =>
+    btn.addEventListener("click", function (event){
+    container.insertAdjacentHTML(
+    "beforeend",
+    `<div class="cartcard">
+    <h5>${item.name}</h5>
+    <h5>${item.price}</h5>
+    </div>`,);
+    }),
+);
 
-const cart = document.querySelector(".cart");
+/* console.log(event.target.closest(".card").getAttribute("item-data")); */
