@@ -174,7 +174,7 @@ function inject(books){
     const container = document.querySelector(".box");
     container.insertAdjacentHTML(
     "beforeend",
-    `<div class="card">
+    `<div class="card" data-item="${books.name}, ${books.price}">
     <div class="item-name" id= ${books.name}>
     <h2>${books.name}</h2>
     </div>
@@ -207,16 +207,19 @@ buttons.forEach((btn) =>
     )
 )
 } */
-const buttons = document.querySelectorAll("btn");
-buttons.forEach((btn) =>
-    btn.addEventListener("click", function (event){
-    container.insertAdjacentHTML(
+const scart = document.querySelector(".cart");
+const buttons = document.querySelectorAll(".btn");
+    buttons.forEach((buttons) =>
+    buttons.addEventListener("click", function (event){
+    console.log(event.target.closest(".card").getAttribute("data-item"));
+    scart.insertAdjacentHTML(
     "beforeend",
     `<div class="cartcard">
-    <h5>${item.name}</h5>
-    <h5>${item.price}</h5>
+    <h5>${books.name}</h5>
+    <h5>${books.price}</h5>
     </div>`,);
     }),
+
 );
 
 /* console.log(event.target.closest(".card").getAttribute("item-data")); */
