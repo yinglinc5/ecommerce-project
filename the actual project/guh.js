@@ -191,23 +191,9 @@ function inject(books){
 inject(books)
 
 //work in progress :[
-/* function addToCart(item){
-const buttons = document.querySelectorAll(".btn");
-buttons.forEach((btn) =>
-    btn.addEventListener("click", function (event) {
-    console.log(event.target.closest(".btn"))
-    const container = document.querySelector(".cart").getAttribute("data-item");
-    container.insertAdjacentHTML(
-    "beforeend",
-    `<div class="cartcard">
-    <h5>${item.name}</h5>
-    <h5>${item.price}</h5>
-    </div>`,);
-    }
-    )
-)
-} */
+
 const scart = document.querySelector(".cart");
+let amt = 0
 const buttons = document.querySelectorAll(".btn");
     buttons.forEach((buttons) =>
     buttons.addEventListener("click", function (event){
@@ -216,10 +202,11 @@ const buttons = document.querySelectorAll(".btn");
     "beforeend",
     `<div class="cartcard">
     <h5>${books.name}</h5>
-    <h5>${books.price}</h5>
+    <h1>${books.price}</h1>
+    <h3> Amount: ${amt}<h3>
     </div>`,);
+    amt++;
     }),
-
 );
 
 /* console.log(event.target.closest(".card").getAttribute("item-data")); */

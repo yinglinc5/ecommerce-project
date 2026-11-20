@@ -62,7 +62,7 @@ margin: 1rem;
     display: flex;
     height: 80rem;
     background-color: #680f15;
-    flex-direction:column;
+    flex-direction: column;
     font-family: "Gelasio", serif;
 }
 .cart h2{
@@ -82,4 +82,25 @@ margin: 1rem;
     color:#e6c19e;
     margin: 4rem;
 
+}
+.cartcard{
+    width: 50%;
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    background-color: #350609;
+    color: #f7d3b3;
+    margin: 2rem;
+    padding: 1rem;
+}
+.cartcard h1{
+font-size: 2rem;
+padding-left: 5rem;
+}
+.cartcard h5{
+font-size: 2rem;
+}
+.cartcard h3{
+font-size: 2rem;
+padding-left: 5rem;
 }
