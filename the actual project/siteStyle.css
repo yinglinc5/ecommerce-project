@@ -64,6 +64,8 @@ margin: 1rem;
     background-color: #680f15;
     flex-direction: column;
     font-family: "Gelasio", serif;
+    padding: 2rem;
+    align-items: center;
 }
 .cart h2{
     font-size: 5rem;
@@ -91,7 +93,8 @@ margin: 1rem;
     background-color: #350609;
     color: #f7d3b3;
     margin: 2rem;
-    padding: 1rem;
+    padding: 1.8rem;
+    border-radius: 1.5rem;
 }
 .cartcard h1{
 font-size: 2rem;
