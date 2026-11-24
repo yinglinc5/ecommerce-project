@@ -188,30 +188,22 @@ function inject(books){
     </div>`,);
 });
 }
-inject(books)
+inject(books);
 
 //work in progress :[
 
 const cart =[
+
 ]
-let amt = 0
-const scart = document.querySelector(".cart");
+
 const buttons = document.querySelectorAll(".btn");
     buttons.forEach((buttons) =>
     buttons.addEventListener("click", function (event){
     console.log(event.target.closest(".card").getAttribute("data-item"));
-    scart.insertAdjacentHTML(
-    "beforeend",
-    `<div class="cartcard">
-    <h5>${books.name}</h5>
-    <h1>${books.price}</h1>
-    <h3> Amount: ${amt}<h3>
-    </div>`,);
-    cart.push(books.name, books.price, amt);
-    if(cart.includes(books.name)){
-    amt++; 
-    }
-    else{
+    })
+)
+    function addToCart(books){
+    cart.push(books);
     scart.insertAdjacentHTML(
     "beforeend",
     `<div class="cartcard">
@@ -220,7 +212,16 @@ const buttons = document.querySelectorAll(".btn");
     <h3> Amount: ${amt}<h3>
     </div>`,);
     }
-    }),
-);
-console.log(cart);
+console.log(addToCart);
+    
+
+
+/* console.log(cart); */
+
+// total price thing
+/* for(let i = 0; i < cart.length; i++){
+    cart[i,]
+};
+
+ */
 /* console.log(event.target.closest(".card").getAttribute("item-data")); */
