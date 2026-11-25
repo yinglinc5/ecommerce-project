@@ -160,6 +160,7 @@ const books = [
         img: "./img/",
     },
 ];
+const cart = [];
 /* 
 function filterGenre(gen){
 let result = books.filter((nov) => nov.genre.includes(gen));
@@ -174,7 +175,7 @@ function inject(books){
     const container = document.querySelector(".box");
     container.insertAdjacentHTML(
     "beforeend",
-    `<div class="card" data-item="${books.name}, ${books.price}">
+    `<div class="card" data-item="${books.name}">
     <div class="item-name" id= ${books.name}>
     <h2>${books.name}</h2>
     </div>
@@ -192,27 +193,30 @@ inject(books);
 
 //work in progress :[
 
-const cart =[
 
-]
-
+let total = 0;
 const buttons = document.querySelectorAll(".btn");
     buttons.forEach((buttons) =>
     buttons.addEventListener("click", function (event){
-    console.log(event.target.closest(".card").getAttribute("data-item"));
-    })
-)
-    function addToCart(books){
-    cart.push(books);
+    let x = event.target.closest(".card").getAttribute("data-item");
+    const result = books.find((book) => `${book.name}` === x);
+    addToCart(result);
+    cart.push(result);
+    
+    }
+) );
+    const scart = document.querySelector(".cart");
+    function addToCart(item){
     scart.insertAdjacentHTML(
     "beforeend",
     `<div class="cartcard">
-    <h5>${books.name}</h5>
-    <h1>${books.price}</h1>
-    <h3> Amount: ${amt}<h3>
+    <h5>${item.name}</h5>
+    <h1>| ${item.price}</h1>
+    <button class="remove">-</button>
     </div>`,);
     }
-console.log(addToCart);
+    
+   
     
 
 

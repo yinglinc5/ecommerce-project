@@ -60,7 +60,6 @@ margin: 1rem;
 }
 .cart{
     display: flex;
-    height: 100rem;
     background-color: #680f15;
     flex-direction: column;
     font-family: "Gelasio", serif;
@@ -107,10 +106,24 @@ font-size: 2rem;
 font-size: 2rem;
 padding-left: 5rem;
 }
-.cart h6{
+.total h6{
     font-size: 4rem;
     font-style: normal;
     color:#e6c19e;
     margin: 4rem;
-    text-align: left;
+
+}
+.remove{
+height: 3rem;
+text-align: center;
+font-size: 4rem;
+padding: 1rem;
+background-color: #f7d3b3;
+border: 2px solid #d39b75;
+text-decoration: none;
+border-radius: 1.5rem;
+color: #350609;
+font-family: "Gelasio", serif;
+margin: 1rem;
+align-content: end;
 }
